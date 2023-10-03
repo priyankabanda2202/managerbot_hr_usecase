@@ -1,0 +1,15 @@
+bind = "127.0.0.1:5000" #change host address accordingly after deployment
+pidfile = 'hypercorn_pid'
+proc_name = 'AI_response'
+workers = 2
+threads = 2
+backlog = 2048
+# worker_class = 'hypercorn.workers.HypercornWorker'
+max_requests = 120
+max_requests_jitter = 15
+timeout = 120
+graceful_timeout = 120
+keepalive = 10
+errorlog = '-'
+accesslog = '-'
+access_log_format = '%(h)s %(1)s %(u)s %(t)s "%(r)s" "%(s)s %(b)s "%(f)s" "%(a)s"'
